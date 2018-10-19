@@ -1,1 +1,1 @@
-RDEPENDS_${PN}_append_swift = " ngfd-plugin-droid-vibrator "
+RDEPENDS_${PN}_append_platy = " ngfd-plugin-droid-vibrator "

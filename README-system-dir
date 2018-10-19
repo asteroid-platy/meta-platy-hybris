@@ -29,9 +29,9 @@ If you have a /system copy with the required files, execute:
   cd vendor/lib/egl/
   ln -s libGLESv2_adreno.so libGLESv2S3D_adreno.so
   cd ../../../lib/hw/
-  ln -s hwcomposer.msm8226.so hwcomposer.dory.so
-  ln -s gralloc.msm8226.so gralloc.dory.so
-  ln -s memtrack.msm8226.so memtrack.dory.so
+  ln -s hwcomposer.msm8909.so hwcomposer.platy.so
+  ln -s gralloc.msm8909.so gralloc.platy.so
+  ln -s memtrack.msm8909.so memtrack.platy.so
   cd ../../../
 
 This installation wouldn't be enough because libhybris needs a patched bionic
@@ -41,12 +41,12 @@ download and then build them (this may take a while):
 
   curl https://storage.googleapis.com/git-repo-downloads/repo > repo
   chmod a+x repo
-  mkdir -p android-swift/
-  cd android-swift
-  # For now the repo manifest is pretty much swift-specific, maybe we should 
+  mkdir -p android-platy/
+  cd android-platy
+  # For now the repo manifest is pretty much platy-specific, maybe we should 
   # split/merge branches later?
-  ../repo init -u https://github.com/AsteroidOS/android_manifest \
-		-b marshmallow-dr1.5-release -g all,-notdefault,-darwin,-mips --depth=1
+  ../repo init -u https://github.com/asteroid-platy/android_manifest \
+		-b android-7.1.1 -g all,-notdefault,-darwin,-mips --depth=1
   ../repo sync -qc
 
   ### Build (can only be done in bash)
@@ -76,7 +76,7 @@ libhybris. There is a script in the libhybris distribution that can pull
 the header files from the downloaded android distribution (above).
 
   git clone https://github.com/libhybris/libhybris
-  ./libhybris/utils/extract_headers.sh android-swift include 6 0 1
+  ./libhybris/utils/extract_headers.sh android-platy include 7 1 1
 
 With the system and include directories, you can create the system-dir tarball:
 

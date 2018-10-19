@@ -1,0 +1,12 @@
+kernel=%%KERNEL%%
+ramdisk=%%RAMDISK%%
+kernel_size=%%KERNEL_SIZE%%
+ramdisk_size=%%RAMDISK_SIZE%%
+kernel_offset=0x00008000
+base_addr=0x00000000
+ramdisk_offset=0x02000000
+tags_offset=0x01e00000
+page_size=2048
+cmd_line="onsole=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive ramoops.mem_address=0x8d700000 ramoops.mem_size=0x100000 ramoops.console_size=0x80000"
+board="platy"
+format=gzip

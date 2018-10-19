@@ -1,15 +1,15 @@
 inherit gettext
 
-SUMMARY = "Downloads the Asus Zenwatch 3 /system and /usr/include/android folders and installs them for libhybris"
+SUMMARY = "Downloads the ZTE Quartz /system and /usr/include/android folders and installs them for libhybris"
 LICENSE = "CLOSED"
-SRC_URI = "http://kicherer.org/aos/system.tar.gz"
-SRC_URI[md5sum] = "60ab67b7b988ee018258744efc547cb7"
-SRC_URI[sha256sum] = "fbe6f939e7062bb14f0df4698dddd9c31e1a098ddb3cceecaee18ddb2fc43366"
-PV = "marshmallow"
+SRC_URI = "nothing"
+SRC_URI[md5sum] = "0"
+SRC_URI[sha256sum] = "0"
+PV = "nougat"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 INHIBIT_PACKAGE_STRIP = "1"
-COMPATIBLE_MACHINE = "swift"
+COMPATIBLE_MACHINE = "platy"
 INSANE_SKIP_${PN} = "already-stripped"
 S = "${WORKDIR}"
 B = "${S}"
