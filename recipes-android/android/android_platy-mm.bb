@@ -2,9 +2,9 @@ inherit gettext
 
 SUMMARY = "Downloads the ZTE Quartz /system and /usr/include/android folders and installs them for libhybris"
 LICENSE = "CLOSED"
-SRC_URI = "nothing"
-SRC_URI[md5sum] = "0"
-SRC_URI[sha256sum] = "0"
+SRC_URI = "http://sean.sspencer10.com/system_platy_edited.tar.gz"
+SRC_URI[md5sum] = "b825e1e59d267fdbee87462be718b649"
+SRC_URI[sha256sum] = "2FF79D03F788810DB74B3E097B6FF7A0BC94B7ECD8B400A54BDC8465E299D816"
 PV = "nougat"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
