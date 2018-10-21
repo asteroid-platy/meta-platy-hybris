@@ -68,6 +68,11 @@ download and then build them (this may take a while):
   cp -r out/target/product/generic/system/* ../system/
   chmod +x ../system/bin/*
 
+# TEMP
+  Edit hardware/qcom/display/msm8909/common.mk and add this line:
+
+  common_includes += $(LOCAL_PATH)/../../../msm8x09/kernel-headers/
+
 libhybris headers
 =================
 
